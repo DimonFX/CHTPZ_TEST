@@ -51,10 +51,10 @@ namespace CHTPZ_TEST_TASK_App.EF
                 #endregion
 
                 #region Фирмы и случайные города юрид. и почтовых адресов 
+                var countCITY = context.CITYs.Local.Count() - 1;
                 for (int i = 1; i <= 23; i++)
                 {
                     Random rnd = new Random();
-                    var countCITY = context.CITYs.Local.Count() - 1;
                     int rndValue = rnd.Next(countCITY);
                     CITY curCITY_POST = context.CITYs.Local.ElementAt(rndValue);
                     rndValue = rnd.Next(countCITY);
